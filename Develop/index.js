@@ -29,10 +29,10 @@ inquirer
         message: 'What license should your project have?',
         choices: [
                 'MIT',
-                'Apache 2.0',
-                'GPL 3.0',
-                'BSD 3',
-                'none',
+                'Apache2.0',
+                'GPL3.0',
+                'BSD3',
+                'None',
         ]              
     }, {
         type: 'input',
