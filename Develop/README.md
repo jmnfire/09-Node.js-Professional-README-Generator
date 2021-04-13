@@ -28,7 +28,7 @@ npm tests
 jmnfire
 ### Link to GitHub:
 ### To access the website
-https://github.com/jmnfire/09-Node.js-Professional-README-Generator/settings 
+https://github.com/jmnfire/09-Node.js-Professional-README-Generator 
 ### Email address 
 jovan.m.nixon@gmail.com
 # Demo
