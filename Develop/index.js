@@ -40,15 +40,15 @@ inquirer
         name: 'dependencies'
     }, {
         type: 'input',
-        message: 'What should be run to run tests?',
+        message: 'What command should be run to run tests?',
         name: 'tests'
     }, {
         type: 'input',
         message: 'What does your user need to know about using this repo?',
-        name: 'repo'
+        name: 'usage'
     }, {
         type: 'input',
-        message: 'What does user need to know about contributing to repo',
+        message: 'What does user need to know about contributing to repo?',
         name: 'contributing'
     },
 ])
@@ -57,34 +57,40 @@ inquirer
 
     fs.writeFile('README.md',
 `
+# Project Title
+${questions.project}
+# Description 
+${questions.briefProject}
+# Table of Contents
+1. [Title](Title)
+2. [Description](#Description)
+3. [Installation](#Installation)
+4. [Usage](#Usage)
+5. [License](#License)
+6. [Contributing](#Contributing)
+7. [Tests](#Tests)
+8. [Questions](#Questions)
+# Installation
+${questions.dependencies}
+# Usage
+${questions.usage}
+# License
+![badge](https://img.shields.io/badge/license-${questions.license}-brightgreen)
+## This application is covered by the ${questions.license} license. 
+# Contributing
+${questions.contributing}
+# Tests
+${questions.tests}
+# Questions
 ## GitHub User name 
 ${questions.userName}
-
-## Email address 
+### Link to GitHub:
+### To access the website
+https://github.com/jmnfire/09-Node.js-Professional-README-Generator/settings 
+### Email address 
 ${questions.address}
-
-# Project Title 
-${questions.project}
-
-## Description 
-${questions.briefProject}
-
-## License
-![badge](https://img.shields.io/badge/license-${questions.license}-brightgreen)
-
-This application is covered by the ${questions.license} license. 
-
-## Dependencies
-${questions.dependencies}
-
-## Tests
-${questions.tests}
-
-## Usage
-${questions.repo}
-
-## Code
-![Changed HTML](./assets/images/code1.png)
+# Demo
+![Demo of README](./assets/image/README.gif)
 
 `, (err) =>
     err ? console.log(err) : console.log('README Created!'))
