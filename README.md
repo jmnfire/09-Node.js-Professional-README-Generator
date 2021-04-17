@@ -32,5 +32,6 @@ https://github.com/jmnfire/09-Node.js-Professional-README-Generator
 ### Email address 
 jovan.m.nixon@gmail.com
 # Demo
-![Demo of README](./assets/image/README.gif)
+![Demo of README](../Develop/assets/image/README.gif)
+
 

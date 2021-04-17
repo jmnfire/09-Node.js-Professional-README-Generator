@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('./utils/generateMarkdown');
+const path = require('path');
 
 // TODO: Create an array of questions for user input
 inquirer
@@ -55,7 +56,7 @@ inquirer
 
 .then((questions) => 
 
-    fs.writeFile('README.md',
+fs.writeFile(path.join(process.cwd(), 'README.md'),
 `
 # Project Title
 ${questions.project}
