@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('./utils/generateMarkdown');
+// const util = require('./utils/generateMarkdown');
 const path = require('path');
 
 // TODO: Create an array of questions for user input
@@ -42,7 +42,8 @@ inquirer
     }, {
         type: 'input',
         message: 'What command should be run to run tests?',
-        name: 'tests'
+        name: 'tests',
+        default: 'NPM Run Test',
     }, {
         type: 'input',
         message: 'What does your user need to know about using this repo?',
